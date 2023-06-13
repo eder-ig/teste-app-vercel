@@ -1,0 +1,45 @@
+
+// .textura-fundo {
+//   background: linear-gradient(165deg, rgba(255, 255, 255, 0.0) 0%, rgb(255, 255, 255) 100%),
+//   repeating-linear-gradient(45deg, #E8F5E9, #E8F5E9 1px, #ffffff 1px, #ffffff 8px) !important;
+// }
+
+.titulo-login {
+  background: rgba(27, 104, 71, 0.1);
+}
+
+.card-autenticacao {
+  width: 600px !important;
+  max-height: 600px !important;
+  border-radius: 0px !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  height: auto;
+}
+.teste {
+  background-color: #FAFAFA !important;
+}
+
+@media (max-width: 600px) {
+  .app-autenticacao {
+    background: #FFFFFF !important;
+  }
+  .card-autenticacao {
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+}
+
+.card-logo {
+  justify-content: center !important;
+}
+
+.required label::after {
+  content: ' *';
+  color: red;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}

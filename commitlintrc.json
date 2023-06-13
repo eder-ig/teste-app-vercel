@@ -1,0 +1,130 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "subject-case": [
+      2,
+      "always",
+      ["sentence-case", "start-case", "pascal-case", "upper-case", "lower-case"]
+    ],
+    "type-enum": [
+      2,
+      "always",
+      [
+        "build",
+        "chore",
+        "ci",
+        "docs",
+        "feat",
+        "fix",
+        "perf",
+        "refactor",
+        "revert",
+        "style",
+        "test"
+      ]
+    ]
+  },
+  "prompt": {
+    "settings": {},
+    "messages": {
+      "skip": ":ignorar",
+      "max": "máximo %d caracteres",
+      "min": "mímino %d caracteres",
+      "emptyWarning": "não pode ser vazio",
+      "upperLimitWarning": "acima do limite máximo",
+      "lowerLimitWarning": "abaixo do limite mínimo"
+    },
+    "questions": {
+      "type": {
+        "description": "Selecione o tipo de alteração que você está submetendo:",
+        "enum": {
+          "feat": {
+            "description": "Recurso novo (ou melhoria)",
+            "title": "Recursos",
+            "emoji": "✨"
+          },
+          "fix": {
+            "description": "Correção de bugs",
+            "title": "Correções de bugs",
+            "emoji": "🐛"
+          },
+          "docs": {
+            "description": "Apenas alterações de documentação",
+            "title": "Documentação",
+            "emoji": "📚"
+          },
+          "style": {
+            "description": "Alterações que não afetam o código (espaço em branco, formatação, ponto e virgula ausentes, etc)",
+            "title": "Estilo",
+            "emoji": "💎"
+          },
+          "refactor": {
+            "description": "Uma mudança de código que nem corrige um bug nem adiciona um recurso",
+            "title": "Refatoração de código",
+            "emoji": "📦"
+          },
+          "perf": {
+            "description": "Uma mudança de código que melhora o desempenho",
+            "title": "Melhorias de desempenho",
+            "emoji": "🚀"
+          },
+          "test": {
+            "description": "Adicionando testes ausentes ou corrigindo testes existentes",
+            "title": "Testes",
+            "emoji": "🚨"
+          },
+          "build": {
+            "description": "Alterações que afetam o sistema de build ou dependências externas (Exemplo de escopos: Gulp, NPM)",
+            "title": "Builds",
+            "emoji": "🛠"
+          },
+          "ci": {
+            "description": "Alterações nos arquivos e scripts de configuração da IC (exemplo de escopos: Travis, Circle)",
+            "title": "Integração contínua",
+            "emoji": "⚙️"
+          },
+          "chore": {
+            "description": "Outras alterações que não modificam arquivos src ou test",
+            "title": "Tarefas",
+            "emoji": "♻️"
+          },
+          "revert": {
+            "description": "Reverte um commit anterior",
+            "title": "Reverter",
+            "emoji": "🗑"
+          }
+        }
+      },
+      "scope": {
+        "description": "Qual é o escopo dessa alteração (por exemplo, componente ou nome do arquivo)"
+      },
+      "subject": {
+        "description": "Escreva uma descrição curta da alteração"
+      },
+      "body": {
+        "description": "Escreva uma descrição detalhada da alteração"
+      },
+      "bodyFormat": {
+        "description": "Escreva uma descrição detalhada da alteração"
+      },
+      "isBreaking": {
+        "description": "Há alguma alteração impactante?"
+      },
+      "breakingBody": {
+        "description": "Um commit de alteração impactante, o commit requer uma descrição detalhada. Por favor, insira uma descrição mais longa"
+      },
+      "breaking": {
+        "description": "Descreva as alterações impactantes"
+      },
+      "isIssueAffected": {
+        "description": "Essa alteração afeta alguma Issue aberta ?"
+      },
+      "issuesBody": {
+        "description": "Se existe alguma Issue relacionada, o commit requer uma descrição detalhada. Por favor, insira uma descrição mais longa"
+      },
+      "issues": {
+        "description": "Adicionar referências da Issue (e.x. 'fix #123', 'close #123'.)"
+      }
+    }
+  }
+}
